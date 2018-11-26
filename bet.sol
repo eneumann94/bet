@@ -53,11 +53,6 @@ contract Aposta {
     } else {
         return "Escolha novamente o mediador"
     }
-    
-    function definirMediador2(address qualMediador1) public somenteApostador2  {
-        require(qualMediador2 != address(0), "Endereço de mediador invalido");
-        mediador = qualMediado2;
-    }
 	
     function definirNomeDaAposta(string qualNomeDaAposta) public somenteMediador  {
         nomeAposta = qualNomeDaAposta;

@@ -30,7 +30,7 @@ contract Aposta {
         apostador1 = msg.sender;
     }
 	
-    function definirNomeDaAposta(string qualNomeDaEmpresa) public somenteApostador1 {
+    function definirNomeDaAposta(string qualNomeDaAposta) public somenteApostador1 {
         nomeAposta = qualNomeDaAposta;
     }
     
@@ -48,7 +48,7 @@ contract Aposta {
     }
     
     while (valorAposta < pagamento1 + pagamento2) {
-        function efetuarPagamento1 (uint pagamento1) public somenteApostador1 {
+        function efetuarPagamento1(uint pagamento1) public somenteApostador1 {
             require(pagamento1);
         }
         function efetuarPagamento2 (uint pagamento2) public somenteApostador2 {

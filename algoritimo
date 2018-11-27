@@ -1,9 +1,9 @@
-1. O contrato pede o endereço do apostador_1;
-2. O contrato pede o endereço do apostador_2;
-3. O contrato pede que o apostador_1 e apostador_2 escolham, consensualmente, um mediador;
-4. O mediador dá um nome para a aposta;
-5. O mediador descreve a aposta;
-6. O mediador define o valor da aposta;
-7. O apostador_1 e apostador_2 efetuam o pagamento da aposta para o contrato;
-8. O mediador diz quem ganhou a aposta;
-9. O contrato envia 90% do montante custodiado para o apostador vencedor e 10% para o mediador.
+1. Quem der o deploy será o apostador_1;
+2. O apostador_1 escolhe um apostador_2;
+3. O apostador_1 dá um nome para a aposta;
+4. Apostador_1 e Apostador_2 transferem o dinheiro para o contrato;
+5. Apostador_1 escolhe um mediador;
+6. Apostador_2 escolhe um mediador;
+7. Se ambos os escolherem o mesmo mediador, o contrato segue a execução. Caso contrário ele pede que ambos ecolham novamente os mediadores.
+8. O Mediador diz quem venceu a aposta;
+9. O contrato envia 90% do custodiado para o vencedor e 10% para o mediador

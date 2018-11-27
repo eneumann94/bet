@@ -32,7 +32,7 @@ contract Aposta {
         nomeAposta = qualNomeDaAposta;
     }
     
-    while (qualMediador1 >< qualMediador2) {
+    while (qualMediador1 != qualMediador2) {
         function definirMediador1(address qualMediador1) public somenteApostador1  {
             require(qualMediador1 != address(0), "Endereço de mediador invalido");
             mediador = qualMediador1;

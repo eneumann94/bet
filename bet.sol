@@ -45,7 +45,7 @@ contract Aposta {
             require(qualMediador2 != address(0), "Endereço de mediador invalido");
             mediador = qualMediador2;
     }
-    
+   
     function definirVencedorDaAposta(string qualVencedorDaAposta) public somenteMediador {
         vencedorAposta = qualVencedorDaAposta;
     }

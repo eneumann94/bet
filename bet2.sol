@@ -25,7 +25,7 @@ contract Aposta {
 
     constructor() public {
         nomeAposta = "BocaXRiver";
-        vencedorAposta = apostador1;
+        vencedorAposta = "apostador1";
     }
 	
     function definirNomeDaAposta(string qualNomeDaAposta) public somenteApostador1 {

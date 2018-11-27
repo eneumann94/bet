@@ -7,6 +7,7 @@ contract Aposta {
     address apostador1;
     address apostador2;
     address mediador;
+    string public vencedorAposta;
 	
     modifier somenteApostador1() {
         require(msg.sender==apostador1, "Somente apostador_1 pode realizar essa operação");

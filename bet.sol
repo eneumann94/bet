@@ -26,10 +26,15 @@ contract Aposta {
     constructor() public {
         nomeAposta = "BocaXRiver";
         vencedorAposta = "apostador1";
+	apostador1 = msg.sender
     }
 	
     function definirNomeDaAposta(string qualNomeDaAposta) public somenteApostador1 {
         nomeAposta = qualNomeDaAposta;
+    }
+    
+    function definirApostador2(address qualApostador2) public somenteApostador1 {
+    	apostador2 = qualApostador2;
     }
     
     while (qualMediador1 != qualMediador2) {

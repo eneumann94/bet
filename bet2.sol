@@ -3,6 +3,7 @@ pragma solidity 0.4.25;
 contract Aposta {
 	
     string public nomeAposta;
+    string public vencedorAposta;
     address apostador1;
     address apostador2;
     address mediador;

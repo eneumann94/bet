@@ -2,8 +2,8 @@ pragma solidity 0.4.25;
 
 contract Aposta {
 	
-    string public nomeAposta;
-    string public vencedorAposta;
+    string public nome;
+    string public vencedor;
     address apostador1;
     address apostador2;
     address mediador;
@@ -27,20 +27,33 @@ contract Aposta {
         mediador = msg.sender;
     }
     
-    function definirNomeDaAposta(string qualNomeDaAposta) public somenteMediador {
-        nomeAposta = qualNomeDaAposta;
+    function definirNomeDaAposta(string _nome) public somenteMediador {
+        nome = _nome;
     }
     
-    function definirApostador1(address qualApostador2) public somenteMediador {
-    	apostador2 = qualApostador2;
+    function definirApostador1(address _apostador1) public somenteMediador {
+    	apostador1 = _apostador1;
     }
     
-    function definirApostador2(address qualApostador2) public somenteMediador {
-    	apostador2 = qualApostador2;
+    function definirApostador2(address _apostador2) public somenteMediador {
+    	apostador2 = _apostador2;
     }
     
-    function definirVencedor(string _vencedorAposta) public somenteMediador {
-        vencedorAposta = _vencedorAposta;
+    function depositar() public payable {
+        
     }
-
+    
+    function definirVencedor(string _vencedor) public somenteMediador {
+        vencedor = _vencedor;
+    }
+    
+    function pagar() public payable {
+        if (vencedor == "apostador1") {
+            apostador1.transfer(msg.value * 90 / 100);
+            mediador.transfer(msg.value * 90 / 100);
+        } else {
+            apostador2.transfer(msg.value * 90 / 100);
+            mediador.transfer(msg.value * 90 / 100);
+        }
+    }
 }

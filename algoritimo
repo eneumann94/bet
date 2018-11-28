@@ -1,9 +1,6 @@
-1. Quem der o deploy será o apostador_1;
-2. O apostador_1 escolhe um apostador_2;
-3. O apostador_1 dá um nome para a aposta;
+1. Quem der o deploy será o mediador;
+2. O mediador escolhe o apostador_1 e o apostador_2;
+3. O mediador dá um nome para a aposta;
 4. Apostador_1 e Apostador_2 transferem o dinheiro para o contrato;
-5. Apostador_1 escolhe um mediador;
-6. Apostador_2 escolhe um mediador;
-7. Se ambos os escolherem o mesmo mediador, o contrato segue a execução. Caso contrário ele pede que ambos ecolham novamente os mediadores.
-8. O Mediador diz quem venceu a aposta;
-9. O contrato envia 90% do custodiado para o vencedor e 10% para o mediador
+5. O Mediador diz quem foi o vencedor;
+6. O contrato envia 90% do montante para o vencedor e 10% para o mediador;

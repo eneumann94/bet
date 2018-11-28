@@ -43,17 +43,17 @@ contract Aposta {
         
     }
     
-    function definirVencedor(string _vencedor) public somenteMediador {
+    function definirVencedor(address _vencedor) public somenteMediador {
         vencedor = _vencedor;
     }
     
-    function pagar() public payable {
-        if (vencedor == "apostador1") {
-            apostador1.transfer(msg.value * 90 / 100);
-            mediador.transfer(msg.value * 10 / 100);
-        } else {
-            apostador2.transfer(msg.value * 90 / 100);
-            mediador.transfer(msg.value * 10 / 100);
+    function pagar() public {
+        if (vencedor = apostador1) {
+            apostador1.transfer((msg.value * 90) / 100);
+            mediador.transfer((msg.value * 10) / 100);
+        } else if (vencedor = apostador2) {
+            apostador2.transfer((msg.value * 90) / 100);
+            mediador.transfer((msg.value * 10) / 100);
         }
     }
 }

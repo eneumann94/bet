@@ -4,9 +4,9 @@ contract Aposta {
 	
     string public nome;
     string public vencedor;
-    address apostador1;
-    address apostador2;
-    address mediador;
+    address public apostador1;
+    address public apostador2;
+    address public mediador;
     
     modifier somenteMediador() {
         require(msg.sender==mediador, "Somente mediador pode realizar essa operação");
@@ -50,10 +50,10 @@ contract Aposta {
     function pagar() public payable {
         if (vencedor == "apostador1") {
             apostador1.transfer(msg.value * 90 / 100);
-            mediador.transfer(msg.value * 90 / 100);
+            mediador.transfer(msg.value * 10 / 100);
         } else {
             apostador2.transfer(msg.value * 90 / 100);
-            mediador.transfer(msg.value * 90 / 100);
+            mediador.transfer(msg.value * 10 / 100);
         }
     }
 }

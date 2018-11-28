@@ -3,7 +3,7 @@ pragma solidity 0.4.25;
 contract Aposta {
 	
     string public nome;
-    string public vencedor;
+    address public vencedor;
     address public apostador1;
     address public apostador2;
     address public mediador;
@@ -48,12 +48,12 @@ contract Aposta {
     }
     
     function pagar() public {
-        if (vencedor = apostador1) {
-            apostador1.transfer((msg.value * 90) / 100);
-            mediador.transfer((msg.value * 10) / 100);
-        } else if (vencedor = apostador2) {
-            apostador2.transfer((msg.value * 90) / 100);
-            mediador.transfer((msg.value * 10) / 100);
+        if (vencedor == apostador1) {
+            apostador1.transfer((address(this).balance * 90) / 100);
+            mediador.transfer((address(this).balance * 10) / 100);
+        } else if (vencedor == apostador2) {
+            apostador2.transfer((address(this).balance * 90) / 100);
+            mediador.transfer((address(this).balance * 10) / 100);
         }
     }
 }
